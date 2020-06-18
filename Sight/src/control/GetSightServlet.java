@@ -39,6 +39,7 @@ public class GetSightServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		try {
 		response.setContentType("text/html;charset=UTF-8");
 		String city=request.getParameter("city");
 		ArrayList<Sight>sights=(ArrayList<Sight>) getServletContext().getAttribute(city);
@@ -47,6 +48,9 @@ public class GetSightServlet extends HttpServlet {
 		request.setAttribute("sightList", sights);
 		RequestDispatcher view = request.getRequestDispatcher("sights.jsp");
 		view.forward(request, response);
+		}catch (NullPointerException npe) {
+		    // It's fine if findUser throws a NPE
+		}
 	}
 
 	/**

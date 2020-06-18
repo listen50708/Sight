@@ -43,7 +43,7 @@ public class ServletListener implements ServletContextListener {
 			long startTime = System.currentTimeMillis();
 			ArrayList<Sight> taipeiSights = crawler.getItems("taipei-city/");
 			sc.setAttribute("taipei", taipeiSights);
-			ArrayList<Sight> newtaipeiSights = crawler.getItems("newtaipei-city/");
+			/*ArrayList<Sight> newtaipeiSights = crawler.getItems("newtaipei-city/");
 			sc.setAttribute("newtaipei", newtaipeiSights);
 			ArrayList<Sight> taoyuanSights = crawler.getItems("taoyuan-city/");
 			sc.setAttribute("taoyuan", taoyuanSights);
@@ -85,7 +85,7 @@ public class ServletListener implements ServletContextListener {
 			sc.setAttribute("kinmencounty", kinmencountySights);
 			ArrayList<Sight> lienchiangcountySights = crawler.getItems("lienchiangcounty/");
 			sc.setAttribute("lienchiangcounty", lienchiangcountySights);
-			
+			*/
 			System.out.println("Using Time:" + (System.currentTimeMillis() - startTime) + " ms");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
