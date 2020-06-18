@@ -7,6 +7,7 @@
   <packaging>jar</packaging>
   <name>embeddedTomcatSample Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
   <properties>
     <tomcat.version>9.0.35</tomcat.version>
   </properties>
@@ -39,9 +40,18 @@
   </dependencies>
   <build>
     <finalName>embeddedTomcatSample</finalName>
-    <plugins>
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.1</version>
+			<configuration>
+				<source>1.7</source>
+				<target>1.7</target>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.codehaus.mojo</groupId>
             <artifactId>appassembler-maven-plugin</artifactId>
             <version>2.0.0</version>
             <configuration>
