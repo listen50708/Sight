@@ -18,7 +18,6 @@ public class SightCrawler {
 		Document document = Jsoup.connect("https://www.travelking.com.tw/tourguide/taiwan/" + cityName)
 				.userAgent("\"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36")
 				.timeout(100000000)
-				.validateTLSCertificates(false)
 				.get();
 		Elements elements = document.body().select("#wrapper >#content>div>#guide-point>div.box>ul>li>a");
 		// System.out.println(elements);
@@ -28,8 +27,8 @@ public class SightCrawler {
 
 			// System.out.println(site + element.attr("href"));
 			Document document2 = Jsoup.connect(site + element.attr("href"))
-					.timeout(100000000)
-					.validateTLSCertificates(false).get();
+					.userAgent("\"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36")
+					.timeout(100000000).get();
 			// Elements nametemp = document2.select("#webarea > div.left >
 			// div#point_area>meta[itemprop=name]");
 			String SightName = element.text();
