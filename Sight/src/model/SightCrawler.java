@@ -49,8 +49,6 @@ public class SightCrawler {
 			Elements addresstemp = document2
 					.select("#wrapper > #content>div>div>div>div>#point_area>meta[itemprop=address]");
 			String Address = addresstemp.attr("content");
-
-			System.out.println(".");
 			// System.out.println(Category);
 			Sight temp = new Sight(SightName, Zone, Category, PhotoURL, Description, Address);
 			sights.add(temp);

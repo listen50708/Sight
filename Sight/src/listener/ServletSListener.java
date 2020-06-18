@@ -19,6 +19,7 @@ public class ServletSListener implements HttpSessionListener {
      * Default constructor. 
      */
 	private static int on=0;
+	private static ArrayList<Sight> adventureList=new ArrayList<Sight>();
     public ServletSListener() {
         // TODO Auto-generated constructor stub
     }
@@ -37,10 +38,20 @@ public class ServletSListener implements HttpSessionListener {
      */
     public void sessionDestroyed(HttpSessionEvent se)  { 
     	on--;
+    	adventureList.clear();
          // TODO Auto-generated method stub
     }
     public static int getOnlineNumber() {
     	return on;
     }
-	
+	public static void addList(Sight sight) {
+		adventureList.add(sight);
+	}
+	public static void deleteList(int i) {
+		adventureList.remove(i);
+	}
+	public static ArrayList<Sight> getList() {
+		
+		return adventureList;
+	}
 }

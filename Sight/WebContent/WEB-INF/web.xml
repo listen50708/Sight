@@ -9,13 +9,29 @@
     <servlet-name>GetSightServlet</servlet-name>
     <url-pattern>/sight</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>adventureServlet</servlet-name>
+    <servlet-class>control.adventureServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>adventureServlet</servlet-name>
+    <url-pattern>/adventure</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>deleteSessionSight</servlet-name>
+    <servlet-class>control.deleteSessionSight</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteSessionSight</servlet-name>
+    <url-pattern>/deleteSession</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>home.jsp</welcome-file>
   </welcome-file-list>
   <listener>
     <listener-class>listener.ServletListener</listener-class>
   </listener>
-   <listener>
+  <listener>
     <listener-class>listener.ServletSListener</listener-class>
   </listener>
 </web-app>
