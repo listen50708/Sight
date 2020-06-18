@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>臺灣觀光景點</title>
+<title>台灣旅遊景點</title>
 </head>
 <body style="background-color: black;">
 	<style type="text/css">
@@ -47,6 +47,10 @@ a {
 	display: inline-block;
 }
 
+.logo {
+	float: left;
+}
+
 .rightsmall {
 	float: right;
 }
@@ -58,48 +62,11 @@ a {
 .b-list-container {
 	display: block;
 }
-.b-ent
-,
-.bbs-screen
-,
-#topbar
-,
-#navigation
-,
-.action-bar
-,
-#article-polling
- 
-.={
-min-width
-:
- 
-600
-px
-;
-
-        
-max-width
-:
- 
-1200
-px
-;
-
-        
-heitht
-=30px;
-
-    
-}
 </style>
 	<div id="topbar-container">
 		<div id="topbar" class="bbs-content">
-			<div style="float: left;">
-				<a id="logo" href="/Sight">TAIWAN</a>
-			</div>
-			<div id="rightsmall">
-				online:<%=ServletSListener.getOnlineNumber()%></div>
+			<a id="logo" href="/Sight">台灣旅遊景點</a> <a class="rightsmall">關於</a> <a
+				class="rightsmall" href="/Sight/adventure">我有大膽的想法</a>
 		</div>
 	</div>
 

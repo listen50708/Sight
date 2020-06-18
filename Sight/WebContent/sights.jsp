@@ -61,6 +61,8 @@ a {
 }
 
 .sight-name {
+    overflow: hidden;
+    width:300px;
 	margin: 0 5ex;
 }
 
