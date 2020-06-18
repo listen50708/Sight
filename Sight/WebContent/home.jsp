@@ -1,6 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=BIG5"
-	pageEncoding="BIG5"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="listener.ServletSListener"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -94,7 +96,7 @@ heitht
 	<div id="topbar-container">
 		<div id="topbar" class="bbs-content">
 			<div style="float: left;">
-				<a id="logo" href="/Sight">台灣旅遊景點</a>
+				<a id="logo" href="/Sight">TAIWAN</a>
 			</div>
 			<div id="rightsmall">
 				online:<%=ServletSListener.getOnlineNumber()%></div>

@@ -40,6 +40,7 @@ public class ServletListener implements ServletContextListener {
     	SightCrawler crawler = new SightCrawler();
 		
 		try {
+			long startTime = System.currentTimeMillis();
 			ArrayList<Sight> taipeiSights = crawler.getItems("taipei-city/");
 			sc.setAttribute("taipei", taipeiSights);
 			ArrayList<Sight> newtaipeiSights = crawler.getItems("newtaipei-city/");
@@ -55,7 +56,7 @@ public class ServletListener implements ServletContextListener {
 			ArrayList<Sight> keelungSights = crawler.getItems("keelungcity/");
 			sc.setAttribute("keelung", keelungSights);
 			ArrayList<Sight> hsinchuSights = crawler.getItems("hsinchucity/");
-			sc.setAttribute("hsinchu", hsinchuSights);
+			sc.setAttribute("hsinchucity", hsinchuSights);
 			ArrayList<Sight> hsinchucountySights = crawler.getItems("hsinchucounty/");
 			sc.setAttribute("hsinchucounty", hsinchucountySights);
 			ArrayList<Sight> miaolicountySights = crawler.getItems("miaolicounty/");
@@ -85,7 +86,7 @@ public class ServletListener implements ServletContextListener {
 			ArrayList<Sight> lienchiangcountySights = crawler.getItems("lienchiangcounty/");
 			sc.setAttribute("lienchiangcounty", lienchiangcountySights);
 			
-			
+			System.out.println("Using Time:" + (System.currentTimeMillis() - startTime) + " ms");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
