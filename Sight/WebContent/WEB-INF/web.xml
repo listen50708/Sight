@@ -3,17 +3,19 @@
   <display-name>twSight</display-name>
   <servlet>
     <servlet-name>GetSightServlet</servlet-name>
-    <servlet-class>Sight.control.GetSightServlet</servlet-class>
+    <servlet-class>control.GetSightServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>GetSightServlet</servlet-name>
     <url-pattern>/sight</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
-    <welcome-file>home.html</welcome-file>
+    <welcome-file>home.jsp</welcome-file>
   </welcome-file-list>
   <listener>
-    <listener-class>Sight.listener.ServletListener</listener-class>
+    <listener-class>listener.ServletListener</listener-class>
   </listener>
-
+   <listener>
+    <listener-class>listener.ServletSListener</listener-class>
+  </listener>
 </web-app>
