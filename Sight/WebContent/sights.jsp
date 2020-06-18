@@ -79,45 +79,50 @@ a {
 
 	<div class="list-group" id="list">
 		<%
-			ArrayList<Sight> list = (ArrayList<Sight>) request.getAttribute("sightList");
-			int i = 0;
-			for (Sight s : list) {
+			try {
+				ArrayList<Sight> list = (ArrayList<Sight>) request.getAttribute("sightList");
+				int i = 0;
+				for (Sight s : list) {
 
-				String name = s.getSightName();
-				String zone = s.getZone();
-				String category = s.getCategory();
-				i++;
+					String name = s.getSightName();
+					String zone = s.getZone();
+					String category = s.getCategory();
+					i++;
 		%>
 		<div class="s-ent" id="" +<%=i%>+" " data-toggle="modal"
-			data-target="#GSCCModal<%=i %>">
+			data-target="#GSCCModal<%=i%>">
 
 			<div class="sight-name">
-				[<%=zone %>]<%=name%>
+				[<%=zone%>]<%=name%>
 			</div>
 			<div class="sight-class"><%=category%></div>
 			</a>
 		</div>
-		<div id="GSCCModal<%=i %>" class="modal fade" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
+		<div id="GSCCModal<%=i%>" class="modal fade" tabindex="-1"
+			role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title" id="myModalLabel"><%=name %></h4>
+						<h4 class="modal-title" id="myModalLabel"><%=name%></h4>
 						<button type="button" class="close" data-dismiss="modal"
 							aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body"></div>
-					<img src=<%=s.getPhotoURL() %>>
-					<div class="des"><%=s.getDescription() %></div>
-					<div class="address">地址:<%=s.getAddress() %></div>
-					<div class="modal-footer">
-					</div>
+					<img src=<%=s.getPhotoURL()%>>
+					<div class="des"><%=s.getDescription()%></div>
+					<div class="address">
+						地址:<%=s.getAddress()%></div>
+					<div class="modal-footer"></div>
 				</div>
 			</div>
 		</div>
 
 		<%
 			i++;
+				}
+			} catch (NullPointerException npe) {
+				System.out.println(npe.toString());
+				// It's fine if findUser throws a NPE
 			}
 		%>
 

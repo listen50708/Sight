@@ -49,6 +49,7 @@ public class GetSightServlet extends HttpServlet {
 		RequestDispatcher view = request.getRequestDispatcher("sights.jsp");
 		view.forward(request, response);
 		}catch (NullPointerException npe) {
+		    System.out.println(npe.toString());
 		    // It's fine if findUser throws a NPE
 		}
 	}
