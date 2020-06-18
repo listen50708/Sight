@@ -16,7 +16,7 @@ public class advHandler {
 	public String firstRoll() {
 		Random rand = new Random(); 
 		
-		return cityName[rand.nextInt(3)];
+		return cityName[rand.nextInt(2)+1];
 	}
 	public Sight secindRoll(ArrayList<Sight> sights) {
 		

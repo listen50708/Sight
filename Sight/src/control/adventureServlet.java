@@ -39,7 +39,7 @@ public class adventureServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		advHandler adv = new advHandler();
 		ArrayList<Sight> sights = (ArrayList<Sight>) getServletContext().getAttribute(adv.firstRoll());
-		ServletSListener.addList(adv.secindRoll(sights));
+		ServletSListener.addList(adv.secindRoll(sights));	
 		RequestDispatcher view = request.getRequestDispatcher("adv.jsp");
 		view.forward(request, response);
 
