@@ -75,7 +75,7 @@ a {
 </style>
 	<div id="topbar-container">
 		<div id="topbar" class="bbs-content">
-			<a id="logo" href="/Sight">台灣旅遊景點>><%=request.getParameter("city") %></a>
+			<a id="logo" href="/">台灣旅遊景點>><%=request.getParameter("city") %></a>
 		</div>
 	</div>
 

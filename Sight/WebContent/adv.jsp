@@ -65,7 +65,7 @@ a {
 </style>
 	<div id="topbar-container">
 		<div id="topbar" class="bbs-content">
-			<a id="logo" href="/Sight">台灣旅遊景點</a><a class="rightsmall" href="/Sight/adventure">DO!!IT!!</a>
+			<a id="logo" href="/">台灣旅遊景點</a><a class="rightsmall" href="/Sight/adventure">DO!!IT!!</a>
 		</div>
 	</div>
 
@@ -83,7 +83,7 @@ a {
 		<div class="b-ent">
 			<div class="sight-name"><%=name%></div>
 			<div class="sight-address"><%=address%></div>
-			<a class="rightsmall" href="/Sight/deleteSession?key=<%=i%>">刪除</a>
+			<a class="rightsmall" href="/deleteSession?key=<%=i%>">刪除</a>
 		</div>
 		<%i++;
 		//deletSession
