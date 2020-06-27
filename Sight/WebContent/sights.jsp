@@ -75,7 +75,7 @@ a {
 </style>
 	<div id="topbar-container">
 		<div id="topbar" class="bbs-content">
-			<a id="logo" href="/">台灣旅遊景點>><%=request.getParameter("city") %></a>
+			<a id="logo" href="home.jsp">台灣旅遊景點>><%=request.getParameter("city") %></a>
 		</div>
 	</div>
 
@@ -91,14 +91,13 @@ a {
 					String category = s.getCategory();
 					i++;
 		%>
-		<div class="s-ent" id="" +<%=i%>+" " data-toggle="modal"
+		<div class="s-ent" id=<%=i%> data-toggle="modal"
 			data-target="#GSCCModal<%=i%>">
 
 			<div class="sight-name">
 				[<%=zone%>]<%=name%>
 			</div>
 			<div class="sight-class"><%=category%></div>
-			</a>
 		</div>
 		<div id="GSCCModal<%=i%>" class="modal fade" tabindex="-1"
 			role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

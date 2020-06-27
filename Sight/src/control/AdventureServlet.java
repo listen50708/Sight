@@ -17,13 +17,13 @@ import model.Sight;
  * Servlet implementation class adventureServlet
  */
 //@WebServlet("/adventureServlet")
-public class adventureServlet extends HttpServlet {
+public class AdventureServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public adventureServlet() {
+	public AdventureServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -37,9 +37,6 @@ public class adventureServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		response.setContentType("text/html;charset=UTF-8");
-		advHandler adv = new advHandler();
-		ArrayList<Sight> sights = (ArrayList<Sight>) getServletContext().getAttribute(adv.firstRoll());
-		ServletSListener.addList(adv.secindRoll(sights));	
 		RequestDispatcher view = request.getRequestDispatcher("adv.jsp");
 		view.forward(request, response);
 

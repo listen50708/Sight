@@ -20,6 +20,7 @@ public class ServletSListener implements HttpSessionListener {
      */
 	private static int on=0;
 	private static ArrayList<Sight> adventureList=new ArrayList<Sight>();
+	private static String[] cityList=null;
     public ServletSListener() {
         // TODO Auto-generated constructor stub
     }
@@ -53,5 +54,12 @@ public class ServletSListener implements HttpSessionListener {
 	public static ArrayList<Sight> getList() {
 		
 		return adventureList;
+	}
+    public static void setCityList(String[] c) {
+		cityList=c;
+	}
+	public static String[] getCityList() {
+		
+		return cityList;
 	}
 }

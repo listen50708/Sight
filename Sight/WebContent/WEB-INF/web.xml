@@ -10,20 +10,29 @@
     <url-pattern>/sight</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>adventureServlet</servlet-name>
-    <servlet-class>control.adventureServlet</servlet-class>
+    <servlet-name>AdventureServlet</servlet-name>
+    <servlet-class>control.AdventureServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>adventureServlet</servlet-name>
+    <servlet-name>AdventureServlet</servlet-name>
     <url-pattern>/adventure</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>deleteSessionSight</servlet-name>
-    <servlet-class>control.deleteSessionSight</servlet-class>
+    <servlet-name>DeleteSessionSightServlet</servlet-name>
+    <servlet-class>control.DeleteSessionSightServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>deleteSessionSight</servlet-name>
+    <servlet-name>DeleteSessionSightServlet</servlet-name>
     <url-pattern>/deleteSession</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>advServlet</servlet-name>
+    <servlet-class>control.advServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>advServlet</servlet-name>
+    <url-pattern>/adv</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>home.jsp</welcome-file>

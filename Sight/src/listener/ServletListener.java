@@ -36,6 +36,7 @@ public class ServletListener implements ServletContextListener {
      */
     public void contextInitialized(ServletContextEvent event)  { 
          // TODO Auto-generated method stub
+    	
     	ServletContext sc = event.getServletContext();
     	SightCrawler crawler = new SightCrawler();
 		

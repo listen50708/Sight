@@ -15,13 +15,13 @@ import model.Sight;
  * Servlet implementation class deleteSessionSight
  */
 @WebServlet("/deleteSessionSight")
-public class deleteSessionSight extends HttpServlet {
+public class DeleteSessionSightServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public deleteSessionSight() {
+    public DeleteSessionSightServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,9 +34,9 @@ public class deleteSessionSight extends HttpServlet {
 		// TODO Auto-generated method stub
 		int i= Integer.parseInt(request.getParameter("key"));
 		ServletSListener.deleteList(i);
-		RequestDispatcher view = request.getRequestDispatcher("adv.jsp");
-		view.forward(request, response);
-		
+		//RequestDispatcher view = request.getRequestDispatcher("adv.jsp");
+		//view.forward(request, response);
+		response.sendRedirect("adv.jsp");
 	}
 
 }

@@ -7,16 +7,11 @@ import listener.ServletSListener;
 import listener.ServletListener;
 import model.Sight;
 public class advHandler {
-	private String[] cityName= {"taipei","newtaipei","taoyuan","taichung","tainan","kaohsiung",
-			                    "keelung","hsinchucity","chiayicity",
-			                    "hsinchucounty","miaolicounty","changhuacounty","nantoucounty","yunlincounty",
-			                    "chiayicounty","pingtungcounty","yilancounty","hualiencounty","taitungcounty",
-			                    "penghucounty","kinmencounty","lienchiangcounty"
-	                           };
-	public String firstRoll() {
+
+	public String firstRoll(String[] cityName) {
 		Random rand = new Random(); 
 		
-		return cityName[rand.nextInt(22)];
+		return cityName[rand.nextInt(cityName.length)];
 	}
 	public Sight secindRoll(ArrayList<Sight> sights) {
 		
